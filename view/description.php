@@ -23,7 +23,7 @@
 		<li>Alla filer som ska ha en template använder sig av <tt>&lt;xi:include href="template.php" /&gt;</tt> där template.php är vilken mall som ska användas. Det betyder att man enkelt kan använda olika templates på olika delar av sidan (för nitroxy handlar det nog bara om två: frontpage och main)</li>
 		<li>Det är innehållet i template som man utgår från och den inkluderar med hjälp av XPath de delar av dokumentet som behövs, e.g. allt i head och allt i body.</li>
 		<li>Både template och vyn kommer i sig att vara ett helt vanliga html-dokument.</li>
-		<li>Vyn har tillgång till de variabler som gavs i <tt>$data</tt> från kontrollern, e.g. <tt>array("foo" => "bar")</tt> ger <tt>$foo</tt> med värdet <tt>"bar"</tt></li>
+		<li>Vyn har tillgång till de variabler som gavs i <tt>$data</tt> från kontrollern, e.g. <tt>array("foo" => "bar")</tt> ger <tt>$foo</tt> med värdet <tt>"bar"</tt> samt kontrollern i sig med hjälp av <tt>$this</tt></li>
 		<li>Det här sättet gör det väldigt lätt att hantera olika typer av vyer, e.g. baserat på filnamn</li>
 		<li>Den stora fördelen är att det är väldigt lätt att ändra på templaten i efterhand, om det är baserat på require i varje vy så kan det potentiellt betyda att man måste ändra alla vyer. Det är också väldigt svårt att veta vad man behöver i förväg.</li>
 	</ul>
