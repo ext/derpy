@@ -45,4 +45,15 @@ class Controller {
 
 		return call_user_func_array($func, $path);
 	}
+
+	function template($view, $data){
+		global $root, $index;
+		$path = "{$root}/view/{$view}";
+		extract($data);
+		ob_start();
+		require($path);
+		$content = ob_get_contents();
+		ob_end_clean();
+		return $content;
+	}
 }

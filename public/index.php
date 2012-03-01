@@ -16,17 +16,6 @@ if ( !file_exists($hpath) ){
 }
 require($hpath);
 
-function template($view, $data){
-  global $root, $index;
-  $path = "{$root}/view/{$view}";
-  extract($data);
-  ob_start();
-  require($path);
-  $content = ob_get_contents();
-  ob_end_clean();
-  return $content;
-}
-
 /* create controller */
 $classname = "{$handler}Controller";
 $controller = new $classname();
