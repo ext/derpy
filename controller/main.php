@@ -12,6 +12,6 @@ class MainController extends Controller {
 	}
 
 	public function description(){
-		return $this->template("description.php", array());
+		return $this->template("description.php");
 	}
 }

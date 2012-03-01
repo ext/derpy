@@ -46,7 +46,7 @@ class Controller {
 		return call_user_func_array($func, $path);
 	}
 
-	function template($view, $data){
+	function template($view, $data=array()){
 		global $root, $index;
 		$path = "{$root}/view/{$view}";
 		extract($data);
